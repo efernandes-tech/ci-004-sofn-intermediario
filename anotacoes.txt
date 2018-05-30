@@ -1,0 +1,5 @@
+# ci-004-sofn-intermediario
+
+# Anotações:
+- Rodar:
+    php -S localhost:1337
