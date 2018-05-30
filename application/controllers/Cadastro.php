@@ -6,7 +6,9 @@ class Cadastro extends CI_Controller {
 
         $this->load->helper("form");
 
+        $this->load->view('partes/header');
         $this->load->view('cadastro/index');
+        $this->load->view('partes/footer');
 
     }
 
