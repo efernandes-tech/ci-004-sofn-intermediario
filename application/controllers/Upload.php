@@ -31,7 +31,9 @@ class Upload extends CI_Controller {
 
         if ($this->upload->do_upload('arquivo') == true) {
             $this->load->library('zip');
+
             $this->zip->add_data('public/upload/' . $config['file_name']);
+
             $this->zip->archive('public/upload/' . $config['file_name'] . '.zip');
 
             $dados = array(
@@ -41,6 +43,7 @@ class Upload extends CI_Controller {
             );
 
             $this->load->model('arquivos_model');
+
             $this->arquivos_model->inserir($dados);
 
             echo "Arquivo Upado";
